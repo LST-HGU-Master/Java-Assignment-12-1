@@ -2,7 +2,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 import java.io.*;
 import java.lang.reflect.Field;
-
+/**
+ * @version (20220610)
+ *  注意）このテストコードは DNAクラスにフィールド str と getPair()が定義されるまでエラーとなる
+ */
 public class DNATest {
     @Test
     public void testStr()
@@ -10,11 +13,11 @@ public class DNATest {
         // action
         DNA dna = new DNA();
         // assertion
-        assertEquals("", dna.str);
+        assertEquals("", dna.str,"DNAクラスのフィールドstrの初期値が指示と異なります!");
         // action
         dna.str = "AAAA";
         // assertion
-        assertEquals("AAAA", dna.str);
+        assertEquals("AAAA", dna.str,"????");
     }
 
     @Test
@@ -22,10 +25,10 @@ public class DNATest {
     {
         // action
         DNA dna = new DNA();
-        dna.str = "AAAAGT";
+        dna.str = "AAAAGTC";
 
         // assertion
-        assertEquals("TTTTCA", dna.getPair());
+        assertEquals("TTTTCAG", dna.getPair(), "getPair()の出力が不正です!");
     }
 
 }
