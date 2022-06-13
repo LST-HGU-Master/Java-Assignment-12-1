@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 import java.io.*;
 import java.lang.reflect.Field;
 /**
- * @version (20220610)
+ * @version (20220613)
  *  注意）このテストコードは DNAクラスにフィールド str と getPair()が定義されるまでエラーとなる
  */
 public class DNATest {
@@ -17,7 +17,7 @@ public class DNATest {
         // action
         dna.str = "AAAA";
         // assertion
-        assertEquals("AAAA", dna.str,"????");
+        assertEquals("AAAA", dna.str,"DNAクラスのフィールドstrの宣言が不正かもしれません!");
     }
 
     @Test
