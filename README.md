@@ -8,6 +8,8 @@
 このDNA文字列を保持するフィールドと、DNA文字列の塩基対となる文字列を生成するメソッドをもつDNAクラスを作成しなさい。
 ただしDNAは AがT と、GはC と必ず対になる。
 
+### DNAクラスのメンバ
+
 | 変数名 | 型 | 初期値  | アクセス修飾子 |
 |-----|-----|------|-----------------|
 | str | String | 空文字列 | public  | 
@@ -16,7 +18,7 @@
 |-------|---------|------|--------|
 | getPair   | なし  | String | public | 
 
-### ProgC1.java (提出不要)
+### ProgC1.java (変更・提出不要)
 ```java
 public class ProgC1 {
 
@@ -29,7 +31,7 @@ public class ProgC1 {
 }
 ```
 
-### 実行例
+### ProgC1.main()の実行結果
 ```
 TAACTTGCCAACACAACTACGTAGTCTTACCAAA
 ```
