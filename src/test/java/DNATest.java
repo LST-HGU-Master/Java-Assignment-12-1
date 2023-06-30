@@ -29,6 +29,19 @@ public class DNATest {
 
         // assertion
         assertEquals("TTTTCAG", dna.getPair(), "getPair()の出力が不正です!");
+        assertEquals("AAAAGTC", dna.str, "DNAクラスのフィールドstrの値を変更してはいけません!");
+    }
+
+    @Test
+    public void testGetPair2()
+    {
+        // action
+        DNA dna = new DNA();
+        dna.str = "ATAAGTC";
+
+        // assertion
+        assertEquals("TATTCAG", dna.getPair(), "getPair()の出力が不正です!");
+        assertEquals("ATAAGTC", dna.str, "DNAクラスのフィールドstrの値を変更してはいけません!");
     }
 
 }
