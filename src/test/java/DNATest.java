@@ -5,6 +5,7 @@ import java.lang.reflect.Field;
 /**
  * @version (20220613)
  *  注意）このテストコードは DNAクラスにフィールド str と getPair()が定義されるまでエラーとなる
+ * @version (20230705) assertEquals()で不一致になったさいのメッセージを変更した。
  */
 public class DNATest {
     @Test
@@ -28,8 +29,8 @@ public class DNATest {
         dna.str = "AAAAGTC";
 
         // assertion
-        assertEquals("TTTTCAG", dna.getPair(), "getPair()の出力が不正です!");
-        assertEquals("AAAAGTC", dna.str, "DNAクラスのフィールドstrの値を変更してはいけません!");
+        assertEquals("TTTTCAG", dna.getPair(), "フィールドstrが AAAAGTC のとき、getPair()は TTTTCAG を出力します!");
+        assertEquals("AAAAGTC", dna.str, "getPair()の出力自体はOKですが、DNAクラスのフィールドstrの値を変更してはいけません!");
     }
 
     @Test
@@ -40,8 +41,8 @@ public class DNATest {
         dna.str = "ATAAGTC";
 
         // assertion
-        assertEquals("TATTCAG", dna.getPair(), "getPair()の出力が不正です!");
-        assertEquals("ATAAGTC", dna.str, "DNAクラスのフィールドstrの値を変更してはいけません!");
+        assertEquals("TATTCAG", dna.getPair(), "フィールドstrが ATAAGTC のとき、getPair()は TATTCAG を出力します!");
+        assertEquals("ATAAGTC", dna.str, "getPair()の出力自体はOKですが、DNAクラスのフィールドstrの値を変更してはいけません!");
     }
 
 }
